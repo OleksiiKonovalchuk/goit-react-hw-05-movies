@@ -31,7 +31,7 @@ const MovieDetails = () => {
       }
     };
     fetchMovie();
-  }, []);
+  }, [movieId]);
   return (
     <>
       <button className={css.btn} onClick={btnBack}>

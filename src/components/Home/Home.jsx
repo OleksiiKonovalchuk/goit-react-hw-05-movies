@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { getTrending } from 'API/API';
 import css from './Home.module.css';
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
         })
       );
     });
-  }, []);
+  }, [location]);
   return (
     <>
       <h1 className={css.title}>Trending today</h1>

@@ -20,8 +20,7 @@ const Reviews = () => {
       }
     };
     fetchMovie();
-  }, []);
-  console.log();
+  }, [movieId]);
   return <ul>{elements}</ul>;
 };
 export default Reviews;

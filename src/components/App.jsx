@@ -7,10 +7,6 @@ const Movies = lazy(() => import('./Movies/Movies'));
 const MovieDetails = lazy(() => import('./MovieDetails/MovieDetails'));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));
-// import Movies from './Movies/Movies';
-// import MovieDetails from './MovieDetails/MovieDetails';
-// import Cast from './Cast/Cast';
-// import Reviews from './Reviews/Reviews';
 const App = () => {
   return (
     <div className={css.App}>

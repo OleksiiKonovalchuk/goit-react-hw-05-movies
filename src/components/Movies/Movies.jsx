@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from 'react';
+import { useEffect, useState } from 'react';
 import { useSearchParams, Link, useLocation } from 'react-router-dom';
 import { searchMovies } from 'API/API';
 import css from './Movies.module.css';
@@ -19,7 +19,6 @@ const Movies = () => {
       setItems(results);
     });
   }, [searchParams, search, setItems]);
-
   return (
     <>
       <form
@@ -32,10 +31,8 @@ const Movies = () => {
         <input
           className={css.input}
           onChange={({ target }) => {
+            setSearch(target.value);
             setSearchParams({ query: target.value });
-            search === ''
-              ? setSearch(searchParams.query)
-              : setSearch(target.value);
           }}
           type="text"
           name="search"
