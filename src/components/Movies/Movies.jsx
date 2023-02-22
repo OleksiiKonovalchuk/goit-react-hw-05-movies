@@ -7,6 +7,7 @@ const Movies = () => {
   const [search, setSearch] = useState();
   const [items, setItems] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get('query');
   const elements = items?.map(({ id, title }) => (
     <li key={id}>
       <Link to={`/movies/${id}`} state={{ from: location }}>
@@ -15,10 +16,10 @@ const Movies = () => {
     </li>
   ));
   useEffect(() => {
-    searchMovies(search).then(({ results }) => {
+    searchMovies(query).then(({ results }) => {
       setItems(results);
     });
-  }, [searchParams, search, setItems]);
+  }, [searchParams, query, setItems]);
   return (
     <>
       <form

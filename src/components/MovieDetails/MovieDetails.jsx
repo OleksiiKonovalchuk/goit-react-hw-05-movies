@@ -66,7 +66,7 @@ const MovieDetails = () => {
           <Link
             className={css.link}
             to={`/movies/${id}/cast`}
-            state={{ from: location }}
+            state={{ from: location.state.from }}
           >
             Cast
           </Link>
@@ -75,7 +75,7 @@ const MovieDetails = () => {
           <Link
             className={css.link}
             to={`/movies/${id}/reviews`}
-            state={{ from: location }}
+            state={{ from: location.state.from }}
           >
             Reviews
           </Link>
